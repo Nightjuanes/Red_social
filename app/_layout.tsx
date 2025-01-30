@@ -1,37 +1,45 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+import { AuthProvider } from "@/context/AutContext";
+import { Stack } from "expo-router";
+import { Ionicons } from '@expo/vector-icons'; // Importa los íconos que necesitas
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
+    <AuthProvider>
+      <Stack
+        screenOptions={{
+          headerShown: false
+        }}
+      >
+        <Stack.Screen 
+          name="index" 
+          options={{ 
+            title: 'Inicio',
+            headerLeft: () => (
+              <Ionicons name="home" size={24} color="black" />
+            )
+          }} 
+        />
+        <Stack.Screen 
+          name="singin" 
+          options={{ 
+            title: 'Registrate',
+            headerLeft: () => (
+              <Ionicons name="person-add" size={24} color="black" />
+            )
+          }} 
+        />
+        <Stack.Screen 
+          name="singup" 
+          options={{ 
+            title: 'Ingresa',
+            headerLeft: () => (
+              <Ionicons name="log-in" size={24} color="black" />
+            )
+          }} 
+        />
+        {/* Cuando el usuario se loggea */}
+        <Stack.Screen name="(tabs)" />
       </Stack>
-    </ThemeProvider>
+    </AuthProvider>
   );
 }
