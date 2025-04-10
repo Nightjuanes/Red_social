@@ -47,4 +47,11 @@ This is a social media mobile application built with **React Native** using **Ex
 
 ## 📁 Project Structure
 
+## 🔥 Firebase Setup
+
+This project uses Firebase for:
+
+- **Authentication** – Email and password login/signup
+- **Firestore** – To store user data, posts, and chats
+- **Storage** – To upload and retrieve user photos
 
