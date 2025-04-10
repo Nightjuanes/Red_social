@@ -15,36 +15,36 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    ```bash
     npx expo start
    ```
+# 📱 Red Social - Social Media App
 
-In the output, you'll find options to open the app in a
+This is a social media mobile application built with **React Native** using **Expo**, designed to offer users an engaging platform where they can:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- 📸 Post and share photos  
+- 🧑‍💼 Create and personalize their own profile  
+- 💬 Chat in real-time with friends  
+- 🔐 Enjoy secure user authentication and data management via **Firebase**
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🚀 Features
 
-When you're ready, run:
+- **Photo Sharing** – Upload and display photos in a clean, modern feed  
+- **User Profiles** – Each user has a dedicated profile with personal content  
+- **Messaging System** – Real-time chat with other users  
+- **Authentication** – Sign up, log in, and manage sessions securely  
+- **Firebase Integration** – Full backend support using Firebase Auth and Firestore
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🛠️ Tech Stack
 
-## Learn more
+- **Frontend**: React Native (Expo)
+- **Backend**: Firebase (Authentication, Firestore)
+- **State Management**: React Context API
+- **Notifications**: Expo Notifications (optional)
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 📁 Project Structure
 
-## Join the community
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
